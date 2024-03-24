@@ -87,6 +87,46 @@ export class GuiModel {
                         }
                     ]
                 },
+                {
+                    "id": "MountainForm",
+                    "title": { default: "Berg" },
+                    "url": "/services/mountain",
+                    "formFieldList": [
+                        {
+                            "id": "name",
+                            "type": "text",
+                            "name": { default: "Name" },
+                            "required": true,
+                            "width": 2
+                        },
+                        {
+                            "id": "height",
+                            "type": "number",
+                            "name": { default: "Höhe" },
+                            "required": true,
+                            "width": 2
+                        },
+                        {
+                            "id": "type",
+                            "type": "text",
+                            "name": { default: "Typ" }, // Zum Beispiel: Skigebiet, Wanderberg etc.
+                            "required": false,
+                            "width": 2
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                } 
             ],
             "pageList": [
                 {
@@ -104,6 +144,15 @@ export class GuiModel {
                             "icon": "fa-file-alt",
                             "color": "wet-asphalt",
                             "page": "toDoPage",
+                            "width": 2,
+                            "newRow": true,
+                        },
+                        {
+                            "type": "button",
+                            "name": { default: "mountain-List" },
+                            "icon": "fa-file-alt",
+                            "color": "wet-asphalt",
+                            "page": "mountainPage",
                             "width": 2,
                             "newRow": true,
                         },
@@ -138,6 +187,36 @@ export class GuiModel {
                         }
                     ]
                 },
+                {
+                    "id": "mountainPage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": { default: "Neuer Berg"},
+                            "icon": "fa-mountain",
+                            "color": "blue",
+                            "width": 2,
+                            "form" : {
+                                "form" : "MountainForm"
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "name": "Berge",
+                            "icon": "fa-mountain",
+                            "color": "wet-asphalt",
+                            "search": true,
+                            "url": "/mountains",
+                            "form": {
+                                "form": "MountainForm"
+                            }
+                        }
+                    ]
+                }
+                
             ]
         }
     };

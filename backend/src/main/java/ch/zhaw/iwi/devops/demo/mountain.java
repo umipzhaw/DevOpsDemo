@@ -1,18 +1,20 @@
 package ch.zhaw.iwi.devops.demo;
 
-public class ToDo {
-
+public class mountain {
+    
     private int id;
     private String title;
-    private String description;
+    private String mountain_type;
 
-    public ToDo() {
+
+
+    public mountain() {
     }
     
-    public ToDo(int id, String title, String description) {
+    public mountain (int id, String title, String mountain_type) {
         this.id = id;
         this.title = title;
-        this.description = description;
+        this.mountain_type = mountain_type;
     }
 
     public int getId() {
@@ -27,8 +29,9 @@ public class ToDo {
         return title;
     }
 
-    public String getDescription() {
-        return description;
+    public String getmountain_type() {
+        return mountain_type;
     }
-    
+   
 }
+
