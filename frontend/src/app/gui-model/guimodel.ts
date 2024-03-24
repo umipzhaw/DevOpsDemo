@@ -90,7 +90,7 @@ export class GuiModel {
                 {
                     "id": "MountainForm",
                     "title": { default: "Berg" },
-                    "url": "/services/mountain",
+                    "url": "/mountain",
                     "formFieldList": [
                         {
                             "id": "name",
