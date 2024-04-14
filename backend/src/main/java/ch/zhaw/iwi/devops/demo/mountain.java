@@ -32,6 +32,13 @@ public class mountain {
     public String getmountain_type() {
         return mountain_type;
     }
+
+    public void setmountain_type(String mountain_type) {
+        this.mountain_type = mountain_type;
+    }
    
+    public void setTitle(String title) {
+        this.title = title;
+    }
 }
 
