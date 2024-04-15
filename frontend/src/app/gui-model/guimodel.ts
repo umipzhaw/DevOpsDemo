@@ -3,7 +3,7 @@ export class GuiModel {
 
     private _guiModel = {
         "application": {
-            "title": "DevOpsDemo FS2024",
+            "title": "DevOpsDemo FS2024 UMIP",
             "formList": [
                 {
                     "id": "OwnUserForm",
@@ -89,28 +89,23 @@ export class GuiModel {
                 },
                 {
                     "id": "MountainForm",
-                    "title": { default: "Berg" },
+                    "title": { "default": "mountain" },
                     "url": "/mountain",
                     "formFieldList": [
                         {
-                            "id": "name",
+                            "id":   "title",
                             "type": "text",
-                            "name": { default: "Name" },
+                            "name": { default: "Titel" },
                             "required": true,
                             "width": 2
                         },
                         {
-                            "id": "height",
-                            "type": "number",
-                            "name": { default: "Höhe" },
-                            "required": true,
-                            "width": 2
-                        },
-                        {
-                            "id": "type",
+                            "id": "mountain_type",
                             "type": "text",
-                            "name": { default: "Typ" }, // Zum Beispiel: Skigebiet, Wanderberg etc.
-                            "required": false,
+                            "name": { default: "Text" },
+                            "newRow": true,
+                            "maxLength": 4000,
+                            "height": 4,
                             "width": 2
                         },
                         {
@@ -126,7 +121,8 @@ export class GuiModel {
                             "name": "Ok"
                         }
                     ]
-                } 
+                }
+                
             ],
             "pageList": [
                 {
