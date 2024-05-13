@@ -193,7 +193,7 @@ export class GuiModel {
                             "type": "newButton",
                             "name": { default: "Neuer Berg"},
                             "icon": "fa-mountain",
-                            "color": "blue",
+                            "color": "red",
                             "width": 2,
                             "form" : {
                                 "form" : "MountainForm"
