@@ -3,7 +3,7 @@ export class GuiModel {
 
     private _guiModel = {
         "application": {
-            "title": "DevOpsDemo FS2024 UMIP",
+            "title": "DevOpsDemo FS2024 UMIP_letzte Änderung",
             "formList": [
                 {
                     "id": "OwnUserForm",
@@ -193,7 +193,7 @@ export class GuiModel {
                             "type": "newButton",
                             "name": { default: "Neuer Berg"},
                             "icon": "fa-mountain",
-                            "color": "yellow",
+                            "color": "green",
                             "width": 2,
                             "form" : {
                                 "form" : "MountainForm"
