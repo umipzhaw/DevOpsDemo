@@ -136,15 +136,6 @@ export class GuiModel {
                         },
                         {
                             "type": "button",
-                            "name": { default: "ToDo-List" },
-                            "icon": "fa-file-alt",
-                            "color": "wet-asphalt",
-                            "page": "toDoPage",
-                            "width": 2,
-                            "newRow": true,
-                        },
-                        {
-                            "type": "button",
                             "name": { default: "mountain-List" },
                             "icon": "fa-file-alt",
                             "color": "wet-asphalt",
