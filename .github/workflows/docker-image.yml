@@ -1,7 +1,6 @@
-name: docker hub push
+name: azure docker deployment
 
 on:
-  workflow_dispatch:
   push:
     branches:
       - 'main'
@@ -27,7 +26,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: mosazhaw/devopsdemo:6269c775974e85bd9144a77e79c062d5f764949b
+          tags: umip/devopsdem:latest
 
   deploy:
     permissions:
@@ -40,6 +39,6 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          images: 'mosazhaw/devopsdemo:6269c775974e85bd9144a77e79c062d5f764949b'
+          app-name: ${{env.AZURE_WEBAPP_NAME}}
+          publish-profile: ${{secrets.AZURE_WEBAPP_PUBLISH_PROFILE}}
+          images: umip/devopsdem:latest
